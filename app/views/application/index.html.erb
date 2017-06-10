@@ -4,20 +4,24 @@
   </div>
 </nav>
 <div class="container">
-  <table>
-    <thead>
-    <tr>
-      <th>word</th>
-      <th>count</th>
-    </tr>
-    </thead>
-    <tbody>
-    <% @hash.rows.each do |row| %>
+  <div class="row">
+    <div class="col s10 offset-s1">
+      <table class="highlight">
+        <thead>
         <tr>
-          <td><%= row[0] %></td>
-          <td><%= row[1] %></td>
+          <th>word</th>
+          <th>count</th>
         </tr>
-    <% end %>
-    </tbody>
-  </table>
+        </thead>
+        <tbody>
+        <% @hash.rows.each do |row| %>
+            <tr>
+              <td><%= row[0] %></td>
+              <td><%= row[1] %></td>
+            </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </div>
