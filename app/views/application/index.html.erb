@@ -16,7 +16,7 @@
         <tbody>
         <% @hash.rows.each do |row| %>
             <tr>
-              <td><%= row[0] %></td>
+              <td><a class="blue-text text-darken-2" href="https://twitter.com/search?q=<%= row[0] %>" target="_blank"><%= row[0] %></a></td>
               <td><%= row[1] %></td>
             </tr>
         <% end %>
