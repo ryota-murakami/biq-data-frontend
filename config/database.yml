@@ -7,12 +7,12 @@ default: &default
 
 development:
   <<: *default
-  database: otsukimi
+  database: streambiqdata
 
 test:
   <<: *default
-  database: otsukimi
+  database: streambiqdata
 
 production:
   <<: *default
-  database: otsukimi
+  database: streambiqdata
