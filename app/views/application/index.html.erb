@@ -1,17 +1,23 @@
-<h1>List</h1>
-<table>
-  <thead>
-  <tr>
-    <th>word</th>
-    <th>count</th>
-  </tr>
-  </thead>
-  <tbody>
-  <% @hash.rows.each do |row| %>
-      <tr>
-        <td><%= row[0] %></td>
-        <td><%= row[1] %></td>
-      </tr>
-  <% end %>
-  </tbody>
-</table>
+<nav>
+  <div class="nav-wrapper">
+    <a class="brand-logo">つぶやきビックデータ</a>
+  </div>
+</nav>
+<div class="container">
+  <table>
+    <thead>
+    <tr>
+      <th>word</th>
+      <th>count</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% @hash.rows.each do |row| %>
+        <tr>
+          <td><%= row[0] %></td>
+          <td><%= row[1] %></td>
+        </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>
