@@ -6,8 +6,8 @@ class ApplicationController < ActionController::Base
       select k.keyword, sum(ri.count)
       from (rankings r join ranking_items ri on r.id = ri.ranking_id)
       join keywords k on ri.keyword_id = k.id
-      where r.id in(select id from rankings order by id desc limit 30)
-      group by k.id,ri.count order by sum(ri.count) desc limit 30;
+      where r.id in(select id from rankings order by id desc limit 300)
+      group by k.id,ri.count order by sum(ri.count) desc limit 300;
     SQL
 
     @hash = ActiveRecord::Base.connection.select_all(query)
